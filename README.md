@@ -2,7 +2,7 @@
 
 # <img src="https://user-images.githubusercontent.com/1358997/33891467-4e1a15ea-df56-11e7-98a0-ecc3e1ec07f0.png" width="64">
 
-[![Build Status](https://travis-ci.com/jarnovanleeuwen/php-tikkie.svg?branch=master)](https://travis-ci.com/jarnovanleeuwen/php-tikkie)
+Forked version of [jarnovanleeuwen/php-tikkie](https://github.com/jarnovanleeuwen/php-tikkie) for PHP 7.0.
 
 #### Easily create payment requests through [Tikkie](https://tikkie.me/).
 
@@ -14,7 +14,17 @@ Unofficial PHP implementation of the [Tikkie API](https://developer.abnamro.com/
 
 Add this package to your project using [Composer](https://getcomposer.org/):
 
-`composer require jarnovanleeuwen/php-tikkie`
+Add to the project's composer.json
+```
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Sutharsan/php-tikkie"
+    }
+  ]
+```
+
+`composer require jarnovanleeuwen/php-tikkie:dev-php70`
 
 # Usage
 
