@@ -48,7 +48,7 @@ class CreateUserTest extends TestCase
         $this->newUser()->save();
     }
 
-    protected function newUser(): User
+    protected function newUser()
     {
         return $this->tikkie->newUser('platformtoken1', [
             'name' => 'ExamplePlatform',

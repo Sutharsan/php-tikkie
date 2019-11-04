@@ -34,7 +34,7 @@ class CreatePaymentRequestTest extends TestCase
         $this->newPaymentRequest()->save();
     }
 
-    protected function newPaymentRequest(): PaymentRequest
+    protected function newPaymentRequest()
     {
         return $this->tikkie->newPaymentRequest('platformtoken1', 'usertoken1', 'bankaccounttoken1', [
             'amountInCents' => '1250',

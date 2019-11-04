@@ -32,7 +32,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $this->tikkie = $this->createPHPTikkie();
     }
 
-    protected function createPHPTikkie(array $options = []): PHPTikkie
+    protected function createPHPTikkie(array $options = [])
     {
         $environment = new Environment(static::API_KEY, false, $options);
         $environment->loadPrivateKey(static::MOCK_PATH.'/private_rsa.pem');
@@ -40,7 +40,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         return new PHPTikkie($environment);
     }
 
-    protected function getMockHttpResponse(string $path): ResponseInterface
+    protected function getMockHttpResponse(string $path)
     {
         return \GuzzleHttp\Psr7\parse_response(file_get_contents(static::MOCK_PATH.'/'.$path));
     }
@@ -48,7 +48,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * @param string|array $paths
      */
-    protected function setMockHttpResponse($paths): void
+    protected function setMockHttpResponse($paths)
     {
         $history = Middleware::history($this->history);
 

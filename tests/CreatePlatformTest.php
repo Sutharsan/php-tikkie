@@ -38,7 +38,7 @@ class CreatePlatformTest extends TestCase
         $this->newPlatform()->save();
     }
 
-    protected function newPlatform(): Platform
+    protected function newPlatform()
     {
         return $this->tikkie->newPlatform([
             'name' => 'MyPlatform',
